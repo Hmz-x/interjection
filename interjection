@@ -1,11 +1,11 @@
 #!/bin/bash 
 
 function show_usage(){
-	echo "usage: $(basename $0) <sub-system> [MODE]" 2>1
-	echo "<sub-system>: \"<What you're referring to as <sub-system>, is in fact, GNU/<sub-system>...\"" 2>1
-	echo "[MODE]: 0 - \"I'd just like to interject for a moment...\"" 2>1
-	echo "[MODE]: 1 - \"No, Richard, it's <sub-system>, not 'GNU/<sub-system>'.\"" 2>1
-	exit 1
+	echo "usage: $(basename $0) <sub-system> [MODE]" >&2
+	echo "<sub-system>: \"<What you're referring to as <sub-system>, is in fact, GNU/<sub-system>...\"" >&2
+	echo "[MODE]: 0 - \"I'd just like to interject for a moment...\"" >&2
+	echo "[MODE]: 1 - \"No, Richard, it's <sub-system>, not 'GNU/<sub-system>'.\"" >&2
+	exit
 }
 
 function GNU_response(){
