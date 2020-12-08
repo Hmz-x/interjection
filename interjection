@@ -1,0 +1,82 @@
+#!/bin/bash 
+
+function show_usage(){
+	echo "usage: $(basename $0) <sub-system> [MODE]" 2>1
+	echo "<sub-system>: \"<What you're referring to as <sub-system>, is in fact, GNU/<sub-system>...\"" 2>1
+	echo "[MODE]: 0 - \"I'd just like to interject for a moment...\"" 2>1
+	echo "[MODE]: 1 - \"No, Richard, it's <sub-system>, not 'GNU/<sub-system>'.\"" 2>1
+	exit 1
+}
+
+function GNU_response(){
+cat << END_OF_FILE
+I'd just like to interject for a moment. What you're referring to as $1, is in fact, GNU/$1, or as I've recently taken to calling it, GNU plus $1. $1 is not an operating system unto itself, but rather another free component of a fully functioning GNU system made useful by the GNU corelibs, shell utilities and vital system components comprising a full OS as defined by POSIX.
+
+Many computer users run a modified version of the GNU system every day, without realizing it. Through a peculiar turn of events, the version of GNU which is widely used today is often called "$1", and many of its users are not aware that it is basically the GNU system, developed by the GNU Project.
+
+There really is a $1, and these people are using it, but it is just a part of the system they use. $1 is the kernel: the program in the system that allocates the machine's resources to the other programs that you run. The kernel is an essential part of an operating system, but useless by itself; it can only function in the context of a complete operating system. $1 is normally used in combination with the GNU operating system: the whole system is basically GNU with $1 added, or GNU/$1. All the so-called "$1" distributions are really distributions of GNU/$1.
+
+Many users do not understand the difference between the kernel, which is $1, and the whole system, which they also call “$1”. The ambiguous use of the name doesn't help people understand. These users often think that Linus Torvalds developed the whole operating system in 1991, with a bit of help.
+
+Programmers generally know that $1 is a kernel. But since they have generally heard the whole system called “$1” as well, they often envisage a history that would justify naming the whole system after the kernel. For example, many believe that once Linus Torvalds finished writing $1, the kernel, its users looked around for other free software to go with it, and found that (for no particular reason) most everything necessary to make a Unix-like system was already available.
+
+What they found was no accident—it was the not-quite-complete GNU system. The available free software added up to a complete system because the GNU Project had been working since 1984 to make one. In the The GNU Manifesto we set forth the goal of developing a free Unix-like system, called GNU. The Initial Announcement of the GNU Project also outlines some of the original plans for the GNU system. By the time $1 was started, GNU was almost finished.
+
+Most free software projects have the goal of developing a particular program for a particular job. For example, Linus Torvalds set out to write a Unix-like kernel ($1); Donald Knuth set out to write a text formatter (TeX); Bob Scheifler set out to develop a window system (the X Window System). It's natural to measure the contribution of this kind of project by specific programs that came from the project.
+
+If we tried to measure the GNU Project's contribution in this way, what would we conclude? One CD-ROM vendor found that in their “$1 distribution”, GNU software was the largest single contingent, around 28% of the total source code, and this included some of the essential major components without which there could be no system. $1 itself was about 3%. (The proportions in 2008 are similar: in the “main” repository of gNewSense, $1 is 1.5% and GNU packages are 15%.) So if you were going to pick a name for the system based on who wrote the programs in the system, the most appropriate single choice would be “GNU”.
+
+But that is not the deepest way to consider the question. The GNU Project was not, is not, a project to develop specific software packages. It was not a project to develop a C compiler, although we did that. It was not a project to develop a text editor, although we developed one. The GNU Project set out to develop a complete free Unix-like system: GNU.
+
+Many people have made major contributions to the free software in the system, and they all deserve credit for their software. But the reason it is an integrated system—and not just a collection of useful programs—is because the GNU Project set out to make it one. We made a list of the programs needed to make a complete free system, and we systematically found, wrote, or found people to write everything on the list. We wrote essential but unexciting components because you can't have a system without them. Some of our system components, the programming tools, became popular on their own among programmers, but we wrote many components that are not tools. We even developed a chess game, GNU Chess, because a complete system needs games too.
+
+By the early 90s we had put together the whole system aside from the kernel. We had also started a kernel, the GNU Hurd, which runs on top of Mach. Developing this kernel has been a lot harder than we expected; the GNU Hurd started working reliably in 2001, but it is a long way from being ready for people to use in general.
+
+Fortunately, we didn't have to wait for the Hurd, because of $1. Once Torvalds freed $1 in 1992, it fit into the last major gap in the GNU system. People could then combine $1 with the GNU system to make a complete free system — a version of the GNU system which also contained $1. The GNU/$1 system, in other words.
+
+Making them work well together was not a trivial job. Some GNU components needed substantial change to work with $1. Integrating a complete system as a distribution that would work “out of the box” was a big job, too. It required addressing the issue of how to install and boot the system—a problem we had not tackled, because we hadn't yet reached that point. Thus, the people who developed the various system distributions did a lot of essential work. But it was work that, in the nature of things, was surely going to be done by someone.
+
+The GNU Project supports GNU/$1 systems as well as the GNU system. The FSF funded the rewriting of the $1-related extensions to the GNU C library, so that now they are well integrated, and the newest GNU/$1 systems use the current library release with no changes. The FSF also funded an early stage of the development of Debian GNU/$1.
+
+Today there are many different variants of the GNU/$1 system (often called “distros”). Most of them include non-free software—their developers follow the philosophy associated with $1 rather than that of GNU. But there are also completely free GNU/$1 distros. The FSF supports computer facilities for gNewSense.
+
+Making a free GNU/$1 distribution is not just a matter of eliminating various non-free programs. Nowadays, the usual version of $1 contains non-free programs too. These programs are intended to be loaded into I/O devices when the system starts, and they are included, as long series of numbers, in the "source code" of $1. Thus, maintaining free GNU/$1 distributions now entails maintaining a free version of $1 too.
+
+Whether you use GNU/$1 or not, please don't confuse the public by using the name “$1” ambiguously. $1 is the kernel, one of the essential major components of the system. The system as a whole is basically the GNU system, with $1 added. When you're talking about this combination, please call it “GNU/$1”.
+END_OF_FILE
+}
+
+function sub_sys_response(){
+cat << END_OF_FILE
+No, Richard, it's '$1', not 'GNU/$1'. The most important contributions that the FSF made to $1 were the creation of the GPL and the GCC compiler. Those are fine and inspired products. GCC is a monumental achievement and has earned you, RMS, and the Free Software Foundation countless kudos and much appreciation.
+
+Following are some reasons for you to mull over, including some already answered in your FAQ.
+
+One guy, Linus Torvalds, used GCC to make his operating system (yes, $1 is an OS -- more on this later). He named it '$1' with a little help from his friends. Why doesn't he call it GNU/$1? Because he wrote it, with more help from his friends, not you. You named your stuff, I named my stuff -- including the software I wrote using GCC -- and Linus named his stuff. The proper name is $1 because Linus Torvalds says so. Linus has spoken. Accept his authority. To do otherwise is to become a nag. You don't want to be known as a nag, do you?
+
+(An operating system) != (a distribution). $1 is an operating system. By my definition, an operating system is that software which provides and limits access to hardware resources on a computer. That definition applies whereever you see $1 in use. However, $1 is usually distributed with a collection of utilities and applications to make it easily configurable as a desktop system, a server, a development box, or a graphics workstation, or whatever the user needs. In such a configuration, we have a $1 (based) distribution. Therein lies your strongest argument for the unwieldy title 'GNU/$1' (when said bundled software is largely from the FSF). Go bug the distribution makers on that one. Take your beef to Red Hat, Mandrake, and Slackware. At least there you have an argument. $1 alone is an operating system that can be used in various applications without any GNU software whatsoever. Embedded applications come to mind as an obvious example.
+
+Next, even if we limit the GNU/$1 title to the GNU-based $1 distributions, we run into another obvious problem. XFree86 may well be more important to a particular $1 installation than the sum of all the GNU contributions. More properly, shouldn't the distribution be called XFree86/$1? Or, at a minimum, XFree86/GNU/$1? Of course, it would be rather arbitrary to draw the line there when many other fine contributions go unlisted. Yes, I know you've heard this one before. Get used to it. You'll keep hearing it until you can cleanly counter it.
+
+You seem to like the lines-of-code metric. There are many lines of GNU code in a typical $1 distribution. You seem to suggest that (more LOC) == (more important). However, I submit to you that raw LOC numbers do not directly correlate with importance. I would suggest that clock cycles spent on code is a better metric. For example, if my system spends 90% of its time executing XFree86 code, XFree86 is probably the single most important collection of code on my system. Even if I loaded ten times as many lines of useless bloatware on my system and I never excuted that bloatware, it certainly isn't more important code than XFree86. Obviously, this metric isn't perfect either, but LOC really, really sucks. Please refrain from using it ever again in supporting any argument.
+
+Last, I'd like to point out that we $1 and GNU users shouldn't be fighting among ourselves over naming other people's software. But what the heck, I'm in a bad mood now. I think I'm feeling sufficiently obnoxious to make the point that GCC is so very famous and, yes, so very useful only because $1 was developed. In a show of proper respect and gratitude, shouldn't you and everyone refer to GCC as 'the $1 compiler'? Or at least, '$1 GCC'? Seriously, where would your masterpiece be without $1? Languishing with the HURD?
+
+If there is a moral buried in this rant, maybe it is this:
+
+Be grateful for your abilities and your incredible success and your considerable fame. Continue to use that success and fame for good, not evil. Also, be especially grateful for $1' huge contribution to that success. You, RMS, the Free Software Foundation, and GNU software have reached their current high profiles largely on the back of $1. You have changed the world. Now, go forth and don't be a nag.
+
+Thanks for listening.
+END_OF_FILE
+}
+
+[[ "$1" == '--help' || "$1" == 'help' || "$1" == '-help' || "$1" == '-h' || "$1" == "END_OF_FILE" ]] && show_usage "$0"
+sub_sys="Linux"
+mode="0"
+
+[[ -n "$1" ]] && sub_sys="$1"
+[[ -n "$2" ]] && mode="$2"
+[[ "$mode" == "0" || "$mode" == "1" ]] || show_usage "$0"
+
+[[ "$mode" == "0" ]] && GNU_response "$sub_sys"
+[[ "$mode" == "1" ]] && sub_sys_response "$sub_sys"
