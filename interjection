@@ -70,13 +70,13 @@ Thanks for listening.
 END_OF_FILE
 }
 
-[[ "$1" == '--help' || "$1" == 'help' || "$1" == '-help' || "$1" == '-h' || "$1" == "END_OF_FILE" ]] && show_usage "$0"
+[[ "$1" == '--help' || "$1" == 'help' || "$1" == '-help' || "$1" == '-h' || "$1" == "END_OF_FILE" ]] && show_usage
 sub_sys="Linux"
 mode="0"
 
 [[ -n "$1" ]] && sub_sys="$1"
 [[ -n "$2" ]] && mode="$2"
-[[ "$mode" == "0" || "$mode" == "1" ]] || show_usage "$0"
+[[ "$mode" == "0" || "$mode" == "1" ]] || show_usage
 
 [[ "$mode" == "0" ]] && GNU_response "$sub_sys"
 [[ "$mode" == "1" ]] && sub_sys_response "$sub_sys"
